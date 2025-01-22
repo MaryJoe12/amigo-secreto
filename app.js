@@ -8,6 +8,7 @@ function agregarAmigo(){
     }else{
         alert("Por favor, ingreese un nombre valido")
     }
+    limpiar()
 }
 
 function sortearAmigo(){
@@ -17,7 +18,10 @@ function sortearAmigo(){
     let sorteo = document.getElementById('resultado');
     agregar("El amigo secreto sorteado es: "+ elementosLista[numeroGenerado].textContent, sorteo);
     elemento.style.display = 'none';
+}
 
+function limpiar(){
+    document.getElementById('amigo').value="";
 }
 
 function agregar(nombre, donde){
